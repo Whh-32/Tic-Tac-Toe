@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tic-tac-toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="beforGame">
+        <div class="start">Tic-Tac-Toe</div>
+        <div class="menu">
+            <div class="btn play">Let's play</div>
+            <div class="btn historyBtn">History</div>
+            <div class="btn exit">Exit</div>
+        </div>
+
+        <div class="history">
+            <div class="list">
+                <div>multiplied win: <span class="winnerTimeM">0</span></div>
+                <div>circle win: <span class="winnerTimeC">0</span></div>
+                <div class="buttoms"></div>
+                <div class="reset">Reset</div>
+                <div class="back">Back</div>
+                
+            </div>
+            
+        </div>
+    </div>
+
+
+
+    <div class="game">
+        <div class="cloumn">
+            <div class="row" data-part="0"></div>
+            <div class="row" data-part="3"></div>
+            <div class="row" data-part="6"></div>
+        </div>
+        <div class="cloumn">
+            <div class="row" data-part="1"></div>
+            <div class="row" data-part="4"></div>
+            <div class="row" data-part="7"></div>
+        </div>
+        <div class="cloumn">
+            <div class="row" data-part="2"></div>
+            <div class="row" data-part="5"></div>
+            <div class="row" data-part="8"></div>
+        </div>
+        <div class="turns"><span class="turn x"></span>,turn.</div>
+    </div>
+
+    <div class="check">
+        <div class="result"><span class="winner"></span>,winner.</div>
+        <div class="option">
+            <div class="again">Retry</div>
+            <div class="btnMenu">menu</div>
+        </div>
+
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,334 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+@font-face {
+    font-family: yekan;
+    src: url(tools/fonts/IRANYekan/ttf/IRANYekanWebMedium.ttf);
+}
+
+body {
+    background-color: rgb(36, 36, 36);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.beforGame {
+    position: absolute;
+    width: 250px;
+    height: 225px;
+    display: flex;
+    background-color: antiquewhite;
+    border-radius: 12px;
+    align-items: center;
+    flex-flow: column;
+    overflow: hidden;
+    opacity: 1;
+    transition: all 500ms;
+
+}
+
+.start {
+    position: relative;
+    font-family: yekan;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(224, 81, 24);
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 500ms;
+    z-index: 1000;
+
+}
+
+.startActive {
+    height: 18%;
+
+}
+
+.menu {
+    position: absolute;
+    width: 100%;
+    height: 82%;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    top: 100%;
+    opacity: 1;
+    transition: all 500ms;
+
+}
+
+.menuActive {
+    top: 18%;
+
+}
+
+.menu :first-child {
+    margin-top: 20px;
+
+}
+
+.history {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    transition: all 500ms;
+    display: none;
+    opacity: 0;
+    transition: all 500ms;
+
+}
+
+.list{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding: 20px;
+    top: 18%;
+    width: 100%;
+    height: 82%;
+    font-family: yekan;
+    font-size: 14px;
+
+}
+
+.reset {
+    margin: 10px 0;
+    font-family: yekan;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    width: 55px;
+    height: 25px;
+    background-color: rgb(245, 111, 22);
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.back {
+    font-family: yekan;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    width: 55px;
+    height: 25px;
+    background-color: rgb(245, 111, 22);
+    font-size: 11px;
+    cursor: pointer;
+
+
+}
+
+.btn {
+    font-family: yekan;
+    font-size: 12px;
+    margin-bottom: 20px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 35px;
+    background-color: rgb(218, 200, 200);
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 900;
+    transition: all 200ms;
+
+}
+
+.btn:hover {
+    background-color: rgb(224, 73, 35);
+    
+}
+
+.game {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: none;
+    opacity: 0;
+    transition: all 500ms;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.cloumn {
+    border-right: 4px solid rgb(224, 81, 24);
+    position: relative;
+    width: calc(100%/3);
+    height: 100%;
+
+}
+
+.cloumn:nth-child(3) {
+    border-right: none;
+
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 4px solid rgb(224, 81, 24);
+    position: relative;
+    width: 100%;
+    height: calc(100%/3);
+    cursor: pointer;
+
+}
+
+.row:last-child {
+    border-bottom: none;
+
+}
+
+.multipel {
+    background: url(image/crossed.png);
+    background-size: cover;
+    width: 60%;
+    height: 60%;
+
+}
+
+.circle {
+    background: url(image/circle.png);
+    background-size: cover;
+    width: 50%;
+    height: 50%;
+
+}
+
+.check {
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.637);
+    backdrop-filter: blur(5px);
+    width: 300px;
+    height: 150px;
+    display: none;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    font-family: yekan;
+    font-weight: 900;
+    font-size: 16px;
+    color: white;
+    position: absolute;
+    transition: all 500ms;
+    opacity: 0;
+
+}
+
+.result {
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    color: black;
+
+}
+
+.again {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 20px 0 20px;
+    border-radius: 8px;
+    width: 65px;
+    height: 35px;
+    background-color: brown;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 300ms;
+
+}
+
+.again:hover {
+    background-color: rgb(190, 35, 35);
+
+}
+
+.btnMenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 20px 0 20px;
+    border-radius: 8px;
+    width: 65px;
+    height: 35px;
+    background-color: brown;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 300ms;
+
+}
+
+.btnMenu:hover {
+    background-color: rgb(199, 35, 35);
+
+}
+
+
+.option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.turns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(226, 217, 217);
+    width: 90px;
+    height: 35px;
+    border-radius: 10px;
+    font-family: yekan;
+    font-weight: 900;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    top: -80px;
+
+}
+
+.x {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    background: url(image/crossed.png);
+    background-size: cover;
+
+}
+
+.o {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    background: url(image/circle.png);
+    background-size: cover;
+
+}
+
